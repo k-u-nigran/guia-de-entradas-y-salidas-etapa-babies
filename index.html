@@ -1,10 +1,450 @@
-# Guía de entradas y salidas · Babies
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guía de entradas y salidas de Kids&Us Nigrán para los cursos Mousy y Linda.">
 
-Archivos:
-- `index.html`: página principal.
-- `logo-nigran.png`: logo de Kids&Us Nigrán.
-- `pegatinas.jpg`: recurso gráfico decorativo.
+  <title>Guía de entradas y salidas · Babies | Kids&Us Nigrán</title>
 
-IMPORTANTE:
-En `index.html`, el botón de WhatsApp usa temporalmente `href="#"`.
-Sustituye `#` por el enlace real del canal oficial de WhatsApp antes de publicar.
+  <style>
+    :root {
+      --pink: #ef6f9c;
+      --coral: #ef5365;
+      --orange: #f47721;
+      --turquoise: #2db4bd;
+      --green: #9abe78;
+      --ink: #222222;
+      --muted: #666666;
+      --soft: #fff7f9;
+      --line: #eee5e8;
+      --white: #ffffff;
+      --max-width: 900px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #fff 0%, #fffafa 100%);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+
+    .header {
+      text-align: center;
+      padding: 10px 12px 22px;
+    }
+
+    .logo {
+      display: block;
+      width: min(100%, 430px);
+      height: auto;
+      margin: 0 auto 18px;
+    }
+
+    .eyebrow {
+      margin: 0 0 7px;
+      color: var(--pink);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(1.8rem, 5vw, 2.7rem);
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--coral);
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: 700;
+    }
+
+    .decorative {
+      display: block;
+      width: min(100%, 620px);
+      height: auto;
+      margin: 4px auto 24px;
+      border-radius: 18px;
+      object-fit: cover;
+      object-position: center;
+      max-height: 150px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: clamp(20px, 4vw, 32px);
+      margin: 18px 0;
+      box-shadow: 0 6px 24px rgba(35, 35, 35, .055);
+    }
+
+    .card.highlight {
+      background: var(--soft);
+      border-left: 6px solid var(--pink);
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: var(--coral);
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      line-height: 1.2;
+    }
+
+    h2::before {
+      content: "";
+      width: 10px;
+      height: 30px;
+      flex: 0 0 10px;
+      border-radius: 10px;
+      background: var(--turquoise);
+    }
+
+    .highlight h2::before {
+      background: var(--pink);
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .steps li {
+      position: relative;
+      padding: 15px 16px 15px 48px;
+      background: #fafafa;
+      border: 1px solid #eeeeee;
+      border-radius: 14px;
+    }
+
+    .steps li::before {
+      content: "✓";
+      position: absolute;
+      left: 16px;
+      top: 13px;
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--turquoise);
+      color: white;
+      font-weight: 800;
+      font-size: .85rem;
+    }
+
+    .important {
+      margin-top: 18px;
+      padding: 16px 18px;
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid #f0dce2;
+    }
+
+    .important strong {
+      color: var(--coral);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: item;
+    }
+
+    .contact-list li {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .contact-list li::before {
+      counter-increment: item;
+      content: counter(item);
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: white;
+      font-weight: 800;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      margin-top: 7px;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--turquoise);
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .whatsapp:hover,
+    .whatsapp:focus {
+      text-decoration: underline;
+    }
+
+    .hours {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .hours-block {
+      padding: 17px;
+      background: #fafafa;
+      border: 1px solid #eeeeee;
+      border-radius: 14px;
+    }
+
+    .hours-block strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--turquoise);
+    }
+
+    .closing {
+      text-align: center;
+      padding: 12px 12px 0;
+      color: var(--muted);
+    }
+
+    .brand {
+      margin-top: 8px;
+      color: var(--coral);
+      font-weight: 800;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        width: min(100% - 20px, var(--max-width));
+        padding-top: 16px;
+      }
+
+      .card {
+        border-radius: 16px;
+        padding: 20px 18px;
+      }
+
+      .decorative {
+        max-height: 105px;
+        border-radius: 14px;
+      }
+
+      .hours {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        width: min(100%, 340px);
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .whatsapp {
+        color: #000;
+        background: transparent;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="header">
+      <img class="logo" src="logo-nigran.png" alt="Kids&Us Nigrán">
+      <p class="eyebrow">Guía para familias</p>
+      <h1>Entradas y salidas · Babies</h1>
+      <p class="subtitle">Cursos Mousy y Linda</p>
+    </header>
+
+    <img
+      class="decorative"
+      src="pegatinas.jpg"
+      alt=""
+      aria-hidden="true"
+    >
+
+    <section class="card">
+      <h2>Bienvenida</h2>
+      <p><strong>Queridas familias:</strong></p>
+      <p class="lead">
+        Bienvenidas a Kids&Us Nigrán.
+      </p>
+      <p>
+        En esta guía encontraréis la información más importante sobre el funcionamiento
+        de las entradas y salidas de la etapa Babies, así como algunas indicaciones que
+        os ayudarán a que el día a día en el centro sea lo más cómodo, ordenado y seguro posible.
+      </p>
+      <p>
+        Os pedimos que la leáis atentamente y, por supuesto, que no dudéis en consultarnos
+        cualquier duda que pueda surgir.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Entrada del alumnado</h2>
+      <p>
+        Para facilitar la llegada de vuestro hijo o hija y garantizar una entrada tranquila
+        y segura, os pedimos que sigáis estas indicaciones:
+      </p>
+
+      <ul class="steps">
+        <li>
+          <strong>Acceso:</strong> la entrada se realizará siempre por la
+          <strong>puerta principal del centro</strong>.
+        </li>
+        <li>
+          <strong>Llegada al centro:</strong> podéis acceder al hall o recepción y esperar
+          en la <strong>zona de la banqueta amarilla</strong>. Allí os recogerá el personal
+          docente para acompañar al alumnado hasta el aula.
+        </li>
+        <li>
+          <strong>Carritos:</strong> podéis dejar los carritos en el hall o recepción del centro.
+        </li>
+        <li>
+          <strong>Punto de entrada y salida:</strong> tanto la entrada como la salida se realizarán
+          por la <strong>puerta principal del centro</strong>.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card highlight">
+      <h2>Importante · Curso Linda</h2>
+
+      <p>
+        Durante el <strong>periodo de adaptación</strong>, el alumnado de Linda accederá al centro
+        acompañado por sus familias a través de la puerta principal.
+      </p>
+
+      <p>
+        Una vez superado este periodo y cuando vuestro hijo o hija esté preparado para comenzar
+        a entrar solo al aula, <strong>os informaremos previamente de cómo se realizará el proceso
+        y os daremos algunas pautas y consejos para facilitar esta transición.</strong>
+      </p>
+
+      <div class="important">
+        <strong>Nuestro objetivo:</strong> que este cambio se realice de forma progresiva,
+        respetando el ritmo de cada persona y haciendo que la adaptación sea lo más sencilla
+        y natural posible.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Comunicaciones del centro</h2>
+
+      <p>
+        Para asegurarnos de que recibís nuestros <strong>avisos y comunicaciones importantes</strong>,
+        os pedimos que realicéis estas dos acciones:
+      </p>
+
+      <ol class="contact-list">
+        <li>
+          <div><strong>Guardad en vuestra agenda el número de teléfono del centro.</strong></div>
+        </li>
+        <li>
+          <div>
+            <strong>Uníos a nuestro canal oficial de WhatsApp:</strong><br>
+            <a class="whatsapp" href="https://whatsapp.com/channel/0029Vb5mfXsHFxP1ZADiTB3e" target="_blank" rel="noopener noreferrer" aria-label="Unirme al canal de WhatsApp de Kids&Us Nigrán">
+              Unirme al canal de WhatsApp de Kids&Us Nigrán
+            </a>
+            <p style="margin-top: 10px;">
+              De esta manera podremos manteneros al tanto de cualquier comunicación relevante durante el curso.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Horario de atención al público</h2>
+
+      <p>Nuestro horario de atención es:</p>
+
+      <div class="hours">
+        <div class="hours-block">
+          <strong>De lunes a jueves</strong>
+          10:00 a 13:00 h<br>
+          16:00 a 19:00 h
+        </div>
+
+        <div class="hours-block">
+          <strong>Viernes</strong>
+          10:00 a 14:00 h
+        </div>
+      </div>
+
+      <p style="margin-top: 18px;">
+        Estaremos encantados de atenderos y ayudaros en todo aquello que necesitéis.
+      </p>
+    </section>
+
+    <footer class="closing">
+      <p>Gracias por vuestra colaboración y confianza.</p>
+      <p class="brand">Kids&Us Nigrán</p>
+    </footer>
+
+  </main>
+</body>
+</html>
