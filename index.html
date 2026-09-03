@@ -80,15 +80,28 @@
       font-weight: 700;
     }
 
-    .decorative {
+    .characters {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: clamp(18px, 4vw, 34px);
+      margin: 2px auto 16px;
+      padding: 0 12px;
+    }
+
+    .character-card {
+      width: min(38vw, 250px);
+      margin: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(35, 35, 35, .08);
+      line-height: 0;
+    }
+
+    .character-card img {
       display: block;
-      width: min(100%, 400px);
+      width: 100%;
       height: auto;
-      margin: 0 auto 12px;
-      border-radius: 12px;
-      object-fit: cover;
-      object-position: center;
-      max-height: 82px;
     }
 
     .card {
@@ -276,10 +289,15 @@
         padding: 20px 18px;
       }
 
-      .decorative {
-        width: min(100%, 300px);
-        max-height: 68px;
-        border-radius: 10px;
+      .characters {
+        gap: 12px;
+        margin-bottom: 12px;
+        padding: 0 4px;
+      }
+
+      .character-card {
+        width: min(43vw, 170px);
+        border-radius: 12px;
       }
 
       .hours {
@@ -321,12 +339,14 @@
       <p class="subtitle">Cursos Mousy y Linda</p>
     </header>
 
-    <img
-      class="decorative"
-      src="pegatinas.jpg"
-      alt=""
-      aria-hidden="true"
-    >
+    <div class="characters" aria-label="Personajes de los cursos">
+      <figure class="character-card">
+        <img src="mousy-web.jpg" alt="Mousy">
+      </figure>
+      <figure class="character-card">
+        <img src="linda-web.jpg" alt="Linda">
+      </figure>
+    </div>
 
     <section class="card">
       <h2>Bienvenida</h2>
