@@ -91,17 +91,19 @@
 
     .character-card {
       width: min(38vw, 250px);
+      aspect-ratio: 1;
       margin: 0;
-      border-radius: 18px;
+      border-radius: 50%;
       overflow: hidden;
-      box-shadow: 0 5px 18px rgba(35, 35, 35, .08);
+      box-shadow: none;
       line-height: 0;
     }
 
     .character-card img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
 
     .card {
@@ -297,7 +299,7 @@
 
       .character-card {
         width: min(43vw, 170px);
-        border-radius: 12px;
+        border-radius: 50%;
       }
 
       .hours {
@@ -341,125 +343,48 @@
 
     <div class="characters" aria-label="Personajes de los cursos">
       <figure class="character-card">
-        <img src="mousy-web.jpg" alt="Mousy">
+        <img src="mousy-circulo.png" alt="Mousy">
       </figure>
       <figure class="character-card">
-        <img src="linda-web.jpg" alt="Linda">
+        <img src="linda-circulo.png" alt="Linda">
       </figure>
     </div>
 
     <section class="card">
       <h2>Bienvenida</h2>
-      <p><strong>Queridas familias:</strong></p>
-      <p class="lead">
-        Bienvenidas a Kids&Us Nigrán.
-      </p>
-      <p>
-        En esta guía encontraréis la información más importante sobre el funcionamiento
-        de las entradas y salidas de la etapa Babies, así como algunas indicaciones que
-        os ayudarán a que el día a día en el centro sea lo más cómodo, ordenado y seguro posible.
-      </p>
-      <p>
-        Os pedimos que la leáis atentamente y, por supuesto, que no dudéis en consultarnos
-        cualquier duda que pueda surgir.
-      </p>
+      <p><strong>Queridas familias,</strong></p>
+      <p>Tenéis en vuestras manos la guía del funcionamiento de Kids&Us Nigrán. Aquí encontraréis todo aquello que consideramos importante que conozcáis sobre el día a día en nuestro centro.</p>
+      <p>Por favor, leedla atentamente y no dudéis en consultarnos cualquier aspecto necesario.</p>
     </section>
 
     <section class="card">
       <h2>Entrada del alumnado</h2>
-      <p>
-        Para facilitar la llegada de vuestro hijo o hija y garantizar una entrada tranquila
-        y segura, os pedimos que sigáis estas indicaciones:
-      </p>
-
       <ul class="steps">
-        <li>
-          <strong>Acceso:</strong> la entrada se realizará siempre por la
-          <strong>puerta principal del centro</strong>.
-        </li>
-        <li>
-          <strong>Llegada al centro:</strong> podéis acceder al hall o recepción y esperar
-          en la <strong>zona de la banqueta amarilla</strong>. Allí os recogerá el personal
-          docente para acompañar al alumnado hasta el aula.
-        </li>
-        <li>
-          <strong>Carritos:</strong> podéis dejar los carritos en el hall o recepción del centro.
-        </li>
-        <li>
-          <strong>Punto de entrada y salida:</strong> tanto la entrada como la salida se realizarán
-          por la <strong>puerta principal del centro</strong>.
-        </li>
+        <li>Acceso por la <strong>puerta principal del centro</strong>.</li>
+        <li>Podéis acceder al hall o recepción del centro y esperar en la <strong>zona de la banqueta amarilla</strong>, donde os recogerá el profesor/a para guiaros al aula.</li>
+        <li><strong>Carritos:</strong> se pueden aparcar en el hall o recepción.</li>
+        <li><strong>Punto de entrada y salida:</strong> siempre por la Puerta Principal del centro / <strong>Excepción:</strong> el alumnado del curso Linda iniciará el curso accediendo por la puerta principal del centro hasta que ya se haya superado el periodo de adaptación y los alumnos comiencen a entrar solos a clase (se os informará de los pasos y consejos para una fácil adaptación.</li>
       </ul>
     </section>
 
-    <section class="card highlight">
-      <h2>Importante · Curso Linda</h2>
 
-      <p>
-        Durante el <strong>periodo de adaptación</strong>, el alumnado de Linda accederá al centro
-        acompañado por sus familias a través de la puerta principal.
-      </p>
-
-      <p>
-        Una vez superado este periodo y cuando vuestro hijo o hija esté preparado para comenzar
-        a entrar solo al aula, <strong>os informaremos previamente de cómo se realizará el proceso
-        y os daremos algunas pautas y consejos para facilitar esta transición.</strong>
-      </p>
-
-      <div class="important">
-        <strong>Nuestro objetivo:</strong> que este cambio se realice de forma progresiva,
-        respetando el ritmo de cada persona y haciendo que la adaptación sea lo más sencilla
-        y natural posible.
-      </div>
-    </section>
 
     <section class="card">
-      <h2>Comunicaciones del centro</h2>
-
-      <p>
-        Para asegurarnos de que recibís nuestros <strong>avisos y comunicaciones importantes</strong>,
-        os pedimos que realicéis estas dos acciones:
-      </p>
-
+      <h2>COMUNICACIONES DEL CENTRO</h2>
+      <p>Para asegurarnos de que recibís nuestros avisos y comunicaciones importantes, os pedimos dos cosas:</p>
       <ol class="contact-list">
-        <li>
-          <div><strong>Guardad en vuestra agenda el número de teléfono del centro.</strong></div>
-        </li>
-        <li>
-          <div>
-            <strong>Uníos a nuestro canal oficial de WhatsApp:</strong><br>
-            <a class="whatsapp" href="https://whatsapp.com/channel/0029Vb5mfXsHFxP1ZADiTB3e" target="_blank" rel="noopener noreferrer" aria-label="Unirme al canal de WhatsApp de Kids&Us Nigrán">
-              Unirme al canal de WhatsApp de Kids&Us Nigrán
-            </a>
-            <p style="margin-top: 10px;">
-              De esta manera podremos manteneros al tanto de cualquier comunicación relevante durante el curso.
-            </p>
-          </div>
-        </li>
+        <li><div>Guardad en vuestra agenda el número de teléfono del centro.</div></li>
+        <li><div>Uníos a nuestro canal oficial de WhatsApp:<br>
+          <a class="whatsapp" href="https://whatsapp.com/channel/0029Vb5mfXsHFxP1ZADiTB3e" target="_blank" rel="noopener noreferrer" aria-label="Unirme al canal de WhatsApp de Kids&Us Nigrán">
+            Unirme al canal de WhatsApp de Kids&Us Nigrán
+          </a>
+        </div></li>
       </ol>
     </section>
 
     <section class="card">
       <h2>Horario de atención al público</h2>
-
-      <p>Nuestro horario de atención es:</p>
-
-      <div class="hours">
-        <div class="hours-block">
-          <strong>De lunes a jueves</strong>
-          10:00 a 13:00 h<br>
-          16:00 a 19:00 h
-        </div>
-
-        <div class="hours-block">
-          <strong>Viernes</strong>
-          10:00 a 14:00 h
-        </div>
-      </div>
-
-      <p style="margin-top: 18px;">
-        Estaremos encantados de atenderos y ayudaros en todo aquello que necesitéis.
-      </p>
+      <p>Nuestro horario de atención al público es de lunes jueves de 10:00 a 13:00h y de 16:00 a 19:00h y viernes de 10:00 a 14:00h</p>
     </section>
 
     <footer class="closing">
